@@ -25,7 +25,6 @@ body {
 }
 
 nav,
-menu,
 section,
 aside,
 main {
@@ -42,10 +41,51 @@ menu {
   background-color: #7048e8;
   color: #fff;
   grid-column: 2 / -1;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 48px;
+}
+
+button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #5f3dc4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+button:last-child {
+  background-color: #d6336c;
+  margin-left: auto;
 }
 
 section {
   background-color: #e9ecef;
+  padding: 40px;
+
+  /* Content walbo oo oo vh ka weenaado scroll oo u sameena hadoo flexbox yhy sheeyga scroll-ka loo sameenaayo waa in laga dhigaa flex-shrink: 1 to flex-shrink: 0; haddii kale items-ka oo shrink ku sameenaa instead oo scroll u sameen lahaa */
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.email {
+  background-color: #adb5bd;
+  height: 96px;
+
+  /* Sababta loogu dhigay 0 section part-iga aa kusoo sharxay */
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 aside {
